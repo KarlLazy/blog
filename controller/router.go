@@ -11,5 +11,7 @@ func Router() (mux *http.ServeMux) {
 	mux.HandleFunc("/user/login", Login)
 	mux.HandleFunc("/user/logout", Logout)
 
+	mux.HandleFunc("/order/findOrder", FindOrder)
+
 	return mux
 }

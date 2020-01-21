@@ -4,6 +4,8 @@ import (
 	"context"
 	"log"
 
+	"blog/config"
+
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -21,7 +23,7 @@ func init() {
 		log.Fatal(err)
 	}
 
-	db = client.DataBase(confit.Config.Mongo.Name)
+	db = client.Database(config.Config.Mongo.Name)
 
 	log.Println("Connect mongo success")
 }

@@ -15,13 +15,13 @@ func init() {
 
 func workDir() {
 	var err error
-
 	WorkDir, err = os.Getwd()
 	if err != nil {
-		fmt.Printf("can not get work directory: %v\n", err)
+		fmt.Printf("can not get work directory: %s\n", err)
+		os.Exit(2)
 	}
 
 	WorkDir = strings.Replace(WorkDir, "\\", "/", -1)
 
-	fmt.Printf("workDir: %s\n", WorkDir)
+	fmt.Printf("workdir: %s\n", WorkDir)
 }

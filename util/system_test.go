@@ -5,9 +5,8 @@ import (
 )
 
 func TestWorkDir(t *testing.T) {
-	t.Logf("workDir: %s", WorkDir)
+	t.Logf("workdir: %s", WorkDir)
 
 	workDir()
-
-	t.Logf("workDir(): %s", WorkDir)
+	t.Logf("workdir(): %s", WorkDir)
 }

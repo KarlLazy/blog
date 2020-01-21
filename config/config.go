@@ -8,7 +8,7 @@ import (
 
 var Config = &configStruct{}
 
-type configSruct struct {
+type configStruct struct {
 	HTTP struct {
 		Addr string
 	}
@@ -24,13 +24,13 @@ type configSruct struct {
 }
 
 func init() {
-	// fileName := util.WorkDir + "/config/config.js"
+
 	fileName := "D:/git/src/blog/config/config.js"
+	// fileName := "./config/config.js"
 
 	content, _ := ioutil.ReadFile(fileName)
 
 	_ = json.Unmarshal(content, &Config)
 
-	fmt.Printf("mongoName: %s", Config.Mongo.Name)
-	fmt.Printf("workDir: %s", util.WorkDir)
+	fmt.Printf("dbName: %s\n", Config.Mongo.Name)
 }
